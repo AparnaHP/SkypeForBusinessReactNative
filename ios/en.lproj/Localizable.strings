@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  SkypeForBusinessReactNative
+
+  Created by Aparna Prasad on 2/1/20.
+  Copyright © 2020 Facebook. All rights reserved.
+*/
+"Not_Supported" = "Platform not supported.";
+"Fail_Online_Meeting" = "Joining online meeting failed. Please Try again later";
+"Cannot_Leave" = "Could Not Leave Meeting";
+"Alert" = "Alert!";
+"Cancel" = "Cancel";
+"Connect_Camera" = "Connecting camera...";

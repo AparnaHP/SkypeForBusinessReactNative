@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="skypeConnVM"
+            type="com.sfb.viewmodel.SkypeCallConnectionVM"/>
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+
+        <com.microsoft.media.MMVRSurfaceView
+            android:id="@+id/mmvrSurfaceViewId"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+        <TextView
+            android:id="@+id/connectingCamLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:layout_centerInParent="true"
+            android:text="@string/connecting_camera"/>
+
+        <RelativeLayout
+            android:id="@+id/previewLayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/gap_20"
+            android:gravity="center_horizontal"
+            android:background="@android:color/transparent"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/endCallButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:backgroundTint="@color/red"
+                android:scaleType="center"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/gap_60"
+                android:src="@drawable/phone_hangup"
+                />
+
+            <ImageButton
+                android:id="@+id/muteAudioButton"
+                android:layout_below="@id/endCallButton"
+                android:layout_width="@dimen/video_call_button_size"
+                android:layout_height="@dimen/video_call_button_size"
+                android:padding="5dp"
+                android:layout_marginStart="@dimen/gap_20"
+                android:layout_marginBottom="@dimen/gap_20"
+                android:layout_alignParentStart="true"
+                android:background="@null"
+                android:src="@drawable/microphone_off"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/on_off_microphone" />
+
+            <ImageButton
+                android:id="@+id/muteVideoButton"
+                android:layout_width="@dimen/video_call_button_size"
+                android:layout_height="@dimen/video_call_button_size"
+                android:padding="5dp"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/endCallButton"
+                android:layout_marginBottom="@dimen/gap_20"
+                android:layout_alignBaseline="@+id/muteAudioButton"
+                android:background="@null"
+                android:src="@drawable/dots_horizontal"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/on_off_video"/>
+
+            <ImageButton
+                android:id="@+id/speakerButton"
+                android:layout_width="@dimen/video_call_button_size"
+                android:layout_height="@dimen/video_call_button_size"
+                android:padding="5dp"
+                android:background="@null"
+                android:layout_below="@id/endCallButton"
+                android:layout_marginBottom="@dimen/gap_20"
+                android:src="@drawable/volume_off"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/gap_20"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/on_off_loudspeaker" />
+        </RelativeLayout>
+
+
+        <FrameLayout
+            android:id="@+id/textureViewFrame"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            tools:ignore="RelativeOverlap">
+
+            <TextureView
+                android:id="@+id/selfParticipantVideoView"
+                android:layout_width="130dp"
+                android:layout_height="160dp"/>
+
+            <ImageButton
+                android:id="@+id/toggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/video_call_button_size"
+                android:padding="5dp"
+                android:layout_gravity="bottom|center_horizontal"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/camera_switch"
+                android:contentDescription="@string/toggle_camera" />
+
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/loadingView"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@android:color/transparent">
+
+            <ProgressBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBar"
+                android:layout_centerInParent="true"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/colorPrimary"
+                />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
