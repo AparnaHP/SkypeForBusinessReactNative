@@ -1,0 +1,6 @@
+framework module SkypeForBusiness {
+  umbrella header "SkypeForBusiness.h"
+
+  export *
+  module * { export * }
+}

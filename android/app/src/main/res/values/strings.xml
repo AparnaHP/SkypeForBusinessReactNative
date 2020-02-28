@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="appName">SkypeForBusinessReactNative</string>
+
+    <!-- skype for business -->
+    <string name="leaveCall">leaveCall</string>
+    <string name="callFragmentInflated">inflated</string>
+    <string name="canToggleCamera">canToggleCamera</string>
+    <string name="connecting_camera">Connecting camera…</string>
+    <string name="cannot_start_meeting">Cannot start the meeting</string>
+    <string name="on_off_video">On/Off Video</string>
+    <string name="on_off_loudspeaker">On/Off LoudSpeaker</string>
+    <string name="on_off_microphone">On/Off Microphone</string>
+    <string name="toggle_camera">Toggle Camera</string>
+    <string name="platform_not_supported">Platform not supported.</string>
+
+    <!--run time-->
+    <string name="phonePermission">Permission to make video calls, record audio and read phone state</string>
+    <string name="permissionDenied">Permission Denied. Go to settings to allow</string>
+    <string name="grant">Grant</string>
+    <string name="deny">Deny</string>
+    <string name="cancel">Cancel</string>
+
+</resources>
